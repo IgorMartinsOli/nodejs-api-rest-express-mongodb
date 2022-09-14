@@ -1,5 +1,6 @@
 const express = require('express')
 const livrosRoutes = require('./livrosRoutes')
+const autoresRoutes = require('./autoresRoutes')
 
 const routes = (app) => {
     app.route('/').get((req, res) => {
@@ -9,6 +10,7 @@ const routes = (app) => {
     app.use(
         express.json(),
         livrosRoutes,
+        autoresRoutes
         )
 }
 
